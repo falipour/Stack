@@ -158,13 +158,13 @@ for i in range(len(predicted)):
         fn_answered += 1
     if predicted_ans != 1 and label_test[i] != 1:
         tn_answered += 1
-print tp_answered+tn_answered+fp_answered+fn_answered
+print (tp_answered+tn_answered+fp_answered+fn_answered)
 precision_answered = tp_answered / float(tp_answered + fp_answered)
 recall_answered = tp_answered / float(tp_answered + fn_answered)
 f1_answered = (2 * precision_answered * recall_answered) / (recall_answered + precision_answered)
-print 'Precision: ', precision_answered
-print 'Recall: ', recall_answered
-print 'F1: ', f1_answered
+print ('Precision: ', precision_answered)
+print ('Recall: ', recall_answered)
+print ('F1: ', f1_answered)
 
 for i in range(len(predicted)):
     predicted_ans = predicted[i]
@@ -180,8 +180,8 @@ for i in range(len(predicted)):
 precision_unanswered = tp_unanswered / float(tp_unanswered + fp_unanswered)
 recall_unanswered = tp_unanswered / float(tp_unanswered + fn_unanswered)
 f1_unanswered = (2 * precision_unanswered * recall_unanswered) / (recall_unanswered + precision_unanswered)
-print 'Precision: ', precision_unanswered
-print 'Recall: ', recall_unanswered
-print 'F1: ', f1_unanswered
+print ('Precision: ', precision_unanswered)
+print ('Recall: ', recall_unanswered)
+print ('F1: ', f1_unanswered)
 
-print 'fianl F1: ',(f1_unanswered + f1_answered) / 2
+print ('fianl F1: ',(f1_unanswered + f1_answered) / 2)
